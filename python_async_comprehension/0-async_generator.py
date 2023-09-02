@@ -3,17 +3,14 @@
 
 import asyncio
 import random
-from typing import AsyncGenerator
+from typing import Generator
 
 
 # Define an asynchronous generator coroutine
-async def async_generator() -> AsyncGenerator[float, None, None]:
-    """Generator of random numbers with delays"""
 
-    # Generate random numbers asynchronously in a loop
+async def async_generator() -> Generator[float, None, None]:
+    """Generator of random numbers with delays"""
     for _ in range(10):
         # Asynchronously wait for 1 second
         await asyncio.sleep(1)
-
-        # Yield a random float between 0 and 10
         yield random.uniform(0, 10)
