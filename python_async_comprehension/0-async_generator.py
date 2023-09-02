@@ -7,7 +7,7 @@ from typing import AsyncGenerator
 
 
 # Define an asynchronous generator coroutine
-async def async_generator() -> AsyncGenerator[float, None]:
+async def async_generator() -> AsyncGenerator[float, None, None]:
     """Generator of random numbers with delays"""
 
     # Generate random numbers asynchronously in a loop
