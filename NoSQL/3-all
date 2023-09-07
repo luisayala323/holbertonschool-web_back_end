@@ -1,0 +1,2 @@
+// a script that list all documents in the collecrion school
+db.school.fin();
