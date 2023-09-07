@@ -1,2 +1,2 @@
-// Script list all documents in the collection school
+// a script that list all documents in the collecrion school
 db.school.fin();
