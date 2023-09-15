@@ -1,13 +1,11 @@
 /* eslint-disable */
-class Airport {
-    constructor(name, code) {
-      this._name = name;
-      this._code = code;
-    }
-  
-    toString() {
-      return `[${this._code}]`;
-    }
+export default class Airport {
+  constructor(name, code) {
+    this._name = name;
+    this._code = code;
   }
-  
-  export default Airport;
+
+  get [Symbol.toStringTag]() {
+    return this._code;
+  }
+}
