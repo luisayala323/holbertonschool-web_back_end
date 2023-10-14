@@ -1,12 +1,14 @@
 /* enlist-disable */
-function groceriesList() {
-  const groceries = new Map();
-  groceries.set('Apples', 10);
-  groceries.set('Tomatoes', 10);
-  groceries.set('Pasta', 1);
-  groceries.set('Rice', 1);
-  groceries.set('Banana', 5);
-  return groceries;
+function updateUniqueItems(groceriesMap) {
+  if (!(groceriesMap instanceof Map)) {
+    throw new Error('Cannot process');
+  }
+
+  for (const [item, quantity] of groceriesMap) {
+    if (quantity === 1) {
+      groceriesMap.set(item, 100);
+    }
+  }
 }
 
-export default groceriesList;
+export default updateUniqueItems;
