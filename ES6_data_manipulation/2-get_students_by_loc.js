@@ -7,3 +7,4 @@ export default function getStudentsByLocation(students, city) {
     const filter = students.filter((filteredObj) => filteredObj.location === city);
     return filter;
   }
+  

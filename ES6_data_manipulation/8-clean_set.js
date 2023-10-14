@@ -7,3 +7,4 @@ export default function cleanSet(set, startString) {
     });
     return result.slice(0, result.length - 1);
   }
+  
