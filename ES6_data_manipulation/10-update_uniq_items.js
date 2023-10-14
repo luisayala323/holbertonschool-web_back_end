@@ -1,15 +1,12 @@
 /* enlist-disable */
-export default function updateUniqueItems(map) {
-    if (!(map instanceof Map)) {
-      throw Error('Cannot process');
-    }
-  
-    for (const [key, value] of map.entries()) {
-      if (value === 1) {
-        map.set(key, 100);
-      }
-    }
-  
-    return map;
-  }
-  
+function updateStudentGradeByCity(students, city, newGrades) {
+  return students
+    .filter((student) => student.location === city)
+    .map((student) => {
+      const gradeObject = newGrades.find((grade) => grade.studentId === student.id);
+      const grade = gradeObject ? gradeObject.grade : 'N/A';
+      return { ...student, grade };
+    });
+}
+
+export default updateStudentGradeByCity;
